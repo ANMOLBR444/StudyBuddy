@@ -103,13 +103,13 @@ app.get('/logout', (req, res, next) => {
             return next(err);
         }
         req.flash('success', 'Goodbye!');
-        res.redirect('/home');
+        res.redirect('/');
     });
 });
 
 //HOME PAGE
 
-app.get('/home', (req, res) => {
+app.get('/', (req, res) => {
     res.render('home')
 })
 
