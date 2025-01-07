@@ -1,0 +1,14 @@
+<%layout('/boilerplate')%>
+
+<div class="row">
+    <% todos.forEach(function(todo) { %>
+        <div>
+            <h2>
+                <%= todo.title %>
+            </h2>
+            <form class="" action="/todos/show/<%= todo._id %>?_method=DELETE" method="POST">
+                <button class="btn btn-danger ">Delete</button>
+            </form>
+        </div>
+    <% }); %>
+</div>

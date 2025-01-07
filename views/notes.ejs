@@ -1,0 +1,105 @@
+<%layout('/boilerplate')%>
+<h1 class="text-center mt-2">NOTES &#128218;</h1>
+<hr class="mt-2">
+<h2>6<sup>th</sup>Semester</h2>
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="ParallelandDistributedComputing">
+            <button class="accordion-button collapsed text-bg-light fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseParallelandDistributedComputing" aria-expanded="true" aria-controls="collapseParallelandDistributedComputing">
+                Parallel and Distributed Computing
+            </button>
+        </h2>
+        <div id="collapseParallelandDistributedComputing" class="accordion-collapse collapse" aria-labelledby="ParallelandDistributedComputing" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <% for(let note of notes) { %>
+                    <% if(note.semester === 6 && note.subject === "Parallel and Distributed Computing") %>
+                        <a href="<%= note.fileurl %>"><%= note.topic %></a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="GenderStudies">
+            <button class="accordion-button collapsed text-bg-light fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGenderStudies" aria-expanded="true" aria-controls="collapseGenderStudies">
+                Gender Studies
+            </button>
+        </h2>
+        <div id="collapseGenderStudies" class="accordion-collapse collapse" aria-labelledby="GenderStudies" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <% for(let note of notes) { %>
+                    <% if(note.semester === 6 && note.subject === "Gender Studies") { %>
+                        <a href="<%= note.fileurl %>"><%= note.topic %></a><br>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+    </div>
+    
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="CompilerDesign">
+            <button class="accordion-button collapsed text-bg-light fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCompilerDesign" aria-expanded="true" aria-controls="collapseCompilerDesign">
+                Compiler Design
+            </button>
+        </h2>
+        <div id="collapseCompilerDesign" class="accordion-collapse collapse" aria-labelledby="CompilerDesign" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <% for(let note of notes) { %>
+                    <% if(note.semester === 6 && note.subject === "Compiler Design") { %>
+                        <a href="<%= note.fileurl %>"><%= note.topic %></a><br>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+    </div>
+    
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="SoftwareEngineeringAndAgileDevelopment">
+            <button class="accordion-button collapsed text-bg-light fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSoftwareEngineeringAndAgileDevelopment" aria-expanded="true" aria-controls="collapseSoftwareEngineeringAndAgileDevelopment">
+                Software Engineering and Agile Development
+            </button>
+        </h2>
+        <div id="collapseSoftwareEngineeringAndAgileDevelopment" class="accordion-collapse collapse" aria-labelledby="SoftwareEngineeringAndAgileDevelopment" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <% for(let note of notes) { %>
+                    <% if(note.semester === 6 && note.subject === "Software Engineering and Agile Development") { %>
+                        <a href="<%= note.fileurl %>"><%= note.topic %></a><br>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+    </div>
+    
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="GenerativeAI">
+            <button class="accordion-button collapsed text-bg-light fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGenerativeAI" aria-expanded="true" aria-controls="collapseGenerativeAI">
+                Generative AI
+            </button>
+        </h2>
+        <div id="collapseGenerativeAI" class="accordion-collapse collapse" aria-labelledby="GenerativeAI" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <% for(let note of notes) { %>
+                    <% if(note.semester === 6 && note.subject === "Generative AI") { %>
+                        <a href="<%= note.fileurl %>"><%= note.topic %></a><br>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+    </div>
+    
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="DataPrivacyAndSecurity">
+            <button class="accordion-button collapsed text-bg-light fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDataPrivacyAndSecurity" aria-expanded="true" aria-controls="collapseDataPrivacyAndSecurity">
+                Data Privacy and Security
+            </button>
+        </h2>
+        <div id="collapseDataPrivacyAndSecurity" class="accordion-collapse collapse" aria-labelledby="DataPrivacyAndSecurity" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <% for(let note of notes) { %>
+                    <% if(note.semester === 6 && note.subject === "Data Privacy and Security") { %>
+                        <a href="<%= note.fileurl %>"><%= note.topic %></a><br>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>

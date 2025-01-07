@@ -1,0 +1,56 @@
+<%layout('/boilerplate')%>
+<div class="row">
+    <h1 class="text-center">Task List</h1>
+    <div class="accordion" id="accordionExample">
+        <% todos.forEach(function(todo) { %>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading<%= todo._id %>">
+                    <button class="accordion-button collapsed text-bg-light fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= todo._id %>" aria-expanded="true" aria-controls="collapse<%= todo._id %>">
+                        <%= todo.title %>
+                    </button>
+                </h2>
+                <div id="collapse<%= todo._id %>" class="accordion-collapse collapse" aria-labelledby="heading<%= todo._id %>" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>Description: <%= todo.description %> </p>
+                        <% if (todo.deadline) { %>
+                        <% 
+                            const formattedDate = todo.deadline.toLocaleDateString('en-IN', {
+                                weekday: 'long',
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric'
+                            });
+                        %>
+                        <p>Deadline: <%= formattedDate %></p>
+                        <% } else { %>
+                            <p>Deadline: No deadline</p>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+    <hr>
+    <h1 class="text-center">Personal Todos</h1>
+    <div class="">
+
+        <form class="d-flex justify-content-center p-2 " action="/<%= currentUser._id %>/personaltodo" method="POST">
+            <input type="text" name = "personal[task]" id="task" class="form-control border-success rounded-start-pill" placeholder="Enter your Task" required>
+            <button class="btn btn-success rounded-end-pill">ADD</button>
+        </form>
+
+        <div class="p-2">
+        <% currentUser.personaltodos.forEach(function(task) { %>
+            <div class="p-2 d-flex justify-content-between border border-success border-opacity-50 rounded text-bg-light mb-2" id="<%= task._id %>">
+                <div class="fs-5" style="max-width: 90%;word-wrap: break-word;">
+                    <%= task.task %>
+                </div>
+                <form class="" action="/<%= task._id %>?_method=DELETE" method="POST">
+                    <button class="btn btn-danger ">Delete</button>
+                </form>
+            </div>
+        <% }); %>
+        </div>
+    </div>
+</div>
