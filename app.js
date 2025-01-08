@@ -24,7 +24,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/collegeproject';
 const secret = process.env.SECRET || 'thisshouldbeabettersecret!';
-mongoose.connect('mongodb://127.0.0.1:27017/collegeproject', {
+mongoose.connect(dbUrl, {
 });
 
 const db = mongoose.connection;
