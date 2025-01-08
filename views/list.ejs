@@ -10,7 +10,7 @@
                     </button>
                 </h2>
                 <div id="collapse<%= todo._id %>" class="accordion-collapse collapse" aria-labelledby="heading<%= todo._id %>" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
+                    <div class="accordion-body" style="max-width: 90%;word-wrap: break-word;">
                         <p>Description: <%= todo.description %> </p>
                         <% if (todo.deadline) { %>
                         <% 
