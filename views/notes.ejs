@@ -12,8 +12,8 @@
         <div id="collapseParallelandDistributedComputing" class="accordion-collapse collapse" aria-labelledby="ParallelandDistributedComputing" data-bs-parent="#accordionExample">
             <div class="accordion-body">
                 <% for(let note of notes) { %>
-                    <% if(note.semester === 6 && note.subject === "Parallel and Distributed Computing") %>
-                        <a href="<%= note.fileurl %>"><%= note.topic %></a>
+                    <% if(note.semester === 6 && note.subject === "Parallel and Distributed Computing"){ %>
+                        <a href="<%= note.fileurl %>"><%= note.topic %></a><br>
                 <% } %>
             </div>
         </div>
