@@ -14,6 +14,7 @@
                 <% for(let note of notes) { %>
                     <% if(note.semester === 6 && note.subject === "Parallel and Distributed Computing"){ %>
                         <a href="<%= note.fileurl %>"><%= note.topic %></a><br>
+                    <% } %>
                 <% } %>
             </div>
         </div>
