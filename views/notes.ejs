@@ -104,3 +104,23 @@
         </div>
     </div>
 </div>
+
+<hr class="mt-5">
+<h2>7<sup>th</sup>Semester</h2>
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="Strategic Communication for Sustainable Development">
+            <button class="accordion-button collapsed text-bg-light fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStrategicCommunicationForSustainableDevelopment" aria-expanded="true" aria-controls="collapseStrategicCommunicationForSustainableDevelopment">
+                Strategic Communication for Sustainable Development
+            </button>
+        </h2>
+        <div id="collapseStrategicCommunicationForSustainableDevelopment" class="accordion-collapse collapse" aria-labelledby="Strategic Communication for Sustainable Development" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <% for(let note of notes) { %>
+                    <% if(note.semester === 7 && note.subject === "Strategic Communication for Sustainable Development"){ %>
+                        <a href="<%= note.fileurl %>"><%= note.topic %></a><br>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+    </div>
